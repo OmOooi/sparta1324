@@ -5,10 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Free - write</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
 	<style>
 		@font-face {
 			font-family: 'continuous';
 			src: url('C:\Users\pc\AppData\Local\Microsoft\Windows\Fonts\continuous.otf');
+		}
+
+		@font-face {
+			font-family: 'InkLipquid';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
 		}
 
 		body {
@@ -17,8 +27,15 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			flex-direction: column;
 			height: 100vh;
 			/* 화면 전체 높이에 Navbar를 중앙으로 정렬합니다. */
+			background-image: url("paper-3155438_1280.jpg");
+			/* 이미지 경로는 실제 이미지 파일의 경로로 변경해야 합니다. */
+			background-size: cover;
+			/* 배경 이미지를 커버하도록 설정합니다. */
+			background-position: center;
+			/* 배경 이미지를 가운데로 정렬합니다. */
 		}
 
 		.container {
@@ -27,47 +44,69 @@
 			position: fixed;
 			/* 화면 상단에 고정시킵니다. */
 			top: 0;
-			background-color: #f8f9fa;
-			/* 배경색 지정 */
 			z-index: 1000;
 			/* 다른 요소 위에 표시될 수 있도록 설정합니다. */
 		}
 
 		.navbar {
-			font-family: 'continuous', sans-serif;
+			font-family: 'continuous';
 			display: flex;
 			justify-content: center;
 			/* Navbar 요소를 가운데 정렬합니다. */
 			align-items: center;
-			padding: 10px 0;
+			padding: 40px 0;
 			/* 위아래로 약간의 여백 추가 */
-			border-bottom: 1px solid #ccc;
+			/* border-bottom: 3px solid #ccc; */
 			/* Navbar 아래에 선 추가 */
 		}
 
 		.navbar-brand {
-			font-size: 64px;
+			font-size: 100px;
 			/* Navbar 로고의 폰트 크기 설정 */
-			color: #333;
+			color: white;
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 			/* 로고 색상 설정 */
 			text-decoration: none;
 			/* 밑줄 제거 */
 		}
 
+		.btn {
+			font-family: 'InkLipquid';
+			font-size: 35px;
+			color: saddlebrown;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+			width: 68%;
+			display: flex;
+			justify-content: flex-end;
+			padding: 10px;
+			text-decoration: none;
+		}
+
 		.board-list {
+			font-family: 'InkLipquid';
+			font-size: 40px;
+			color: white;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			padding: 10px 0;
-			border-bottom: 1px solid #ccc;
-			width: 90%;
-			max-width: 1200px;
-			margin: 0 auto;
+			width: 400%;
+			max-width: 1300px;
+			margin: 0;
+			background-color: rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 		}
 
-		.post-area {
-			padding: 10px 0;
-			margin-right: 20px;
+		.board-list th {
+			width: 1600px;
+			padding: 10px;
+			padding-right: 10px;
+		}
+
+		td {
+			text-align: center;
 		}
 	</style>
 </head>
@@ -80,9 +119,12 @@
 			</div>
 		</nav>
 	</div>
+	<div class="btn">
+		<a class="btn btn-primary" href="#" role="button">글쓰기</a>
+	</div>
 	<div class="board-list">
 		<table>
-			<caption>자유 게시판</caption>
+			<caption style="font-size: 50px;">자유 게시판</caption>
 			<colgroup>
 				<col class="size01" data-alias="number">
 
@@ -137,11 +179,83 @@
 
 					<td class="reco">0</td>
 				</tr>
+				<tr class="">
+					<td class="num">
+						<span>1</span>
+					</td>
+
+					<td class="tit">
+						<div class="text-wrap">
+							<div>
+								<a>chugsoon</a>
+							</div>
+							<span data-opinion-bbs-comeidx="4811" data-opinion-bbs-uid="1" data-opinion-bbs-opi="6"
+								class="con-comment">[0]</span>
+						</div>
+					</td>
+
+					<td class="user">
+						<span class="layerNickName">cuty</span>
+					</td>
+
+					<td class="date">16:08</td>
+
+					<td class="view">0</td>
+
+					<td class="reco">0</td>
+				</tr>
+				<tr class="">
+					<td class="num">
+						<span>1</span>
+					</td>
+
+					<td class="tit">
+						<div class="text-wrap">
+							<div>
+								<a>chugsoon</a>
+							</div>
+							<span data-opinion-bbs-comeidx="4811" data-opinion-bbs-uid="1" data-opinion-bbs-opi="6"
+								class="con-comment">[0]</span>
+						</div>
+					</td>
+
+					<td class="user">
+						<span class="layerNickName">cuty</span>
+					</td>
+
+					<td class="date">16:08</td>
+
+					<td class="view">0</td>
+
+					<td class="reco">0</td>
+				</tr>
+				<tr class="">
+					<td class="num">
+						<span>1</span>
+					</td>
+
+					<td class="tit">
+						<div class="text-wrap">
+							<div>
+								<a>chugsoon</a>
+							</div>
+							<span data-opinion-bbs-comeidx="4811" data-opinion-bbs-uid="1" data-opinion-bbs-opi="6"
+								class="con-comment">[0]</span>
+						</div>
+					</td>
+
+					<td class="user">
+						<span class="layerNickName">cuty</span>
+					</td>
+
+					<td class="date">16:08</td>
+
+					<td class="view">0</td>
+
+					<td class="reco">0</td>
+				</tr>
 			</tbody>
 		</table>
-	</div>
-	<div class="post-area">
-		<a class="btn dark write" href=>글쓰기</a>
 	</div>
 </body>
 

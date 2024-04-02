@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 작성자, 제목, 내용 디자인 부분 */
+
+        .form_size{
+            width: 500px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .form_size .username,
+        .form_size .title,
+        .form_size textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .form_size textarea {
+            height: 400px;
+        }
+        .post_button{
+            display: inline-block;
+            margin-top: 30px;
+            width: 30%;
+            height: 30px;
+        }
+
+        .post_data h2 {
+            margin: 50px 0;
+        }
+
+        .post_data {
+            width: 500px;
+        }
+
+        .post_data1 {
+            width: 500px;
+            height: 500px;
+        }
+
+        .post_data p {
+            width: 100%;
+            box-sizing: border-box;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #000;
+        }
+
+        .post_1 {
+            height: 500px;
+        }
+
+        .post_submit {
+            display: inline-block;
+            margin-top: 30px;
+            width: 30%;
+            height: 30px;
+        }
+
+        .comment {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <!-- 게시물 -->
+            <div class="post_data">
+                <h2>post</h2>
+                <div>
+                    <p>
+                        <input type="text" class="post_data" placeholder={alphaDB.subject}>
+                        </input>
+                    </p>
+                    <br>
+                    <p>
+                        <input type="text" class="post_data" placeholder="안녕 나는 좀식은감자">
+                        </input>
+                    </p>
+                    <br>
+                    <p class="post_1">
+                        <textarea class="post_data1">
+                        </textarea>
+                    </p>
+                    <br>
+                </div>
+            </div>
+<hr>
+            <!-- 댓글 보여주기 -->
+                    <div class="comment" >
+                        <p>작성자 : </p>
+                        <p>---- 댓글 내용----- </p>
+                        <button  class="">수정</button>
+                        <button class="">삭제</button>
+                    </div>
+            <!-- 댓글 추가-->
+            <div class="comment_add">
+                <form id="comment_form">
+                    <input type="text" id="comment_input" name="comment_input" placeholder="댓글 추가">
+                    <button class="comment_button">comment_add</button>
+                </form>
+            </div>
+            <!-- 댓글 검색 -->
+            <div class="comment_search">
+                <form id="comment_search_form">
+                    <input type="text" id="comment_search_input" name="comment_search_input" placeholder="댓글 검색">
+                    <button class="comment_search_button" >comment_search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html

@@ -43,18 +43,16 @@
     <div class="main">
         <h2>post add</h2>
         <div>
-            <form action="{{url_for('post_add')}}" method="post" class="form_size" >
-                <input class="username" type="text" name="username" placeholder="작성자">
+            <form action="{{ url_for('post_add_button') }}" method="get" class="form_size">
+                <input type="text" class="username" name="username" placeholder="작성자">
                 <br>
                 <br>
-                <input class = 'title' type="text" name="title" placeholder="제목을 입력해주세요">
+                <input type="text" class="title" name="title" placeholder="제목을 입력해주세요">
                 <br>
                 <br>
-                <textarea class= 'content' name="content" placeholder="내용 입력"></textarea>
+                <textarea class="content" name="content" placeholder="내용 입력"></textarea>
                 <br>
-                <button class="post_button" onClick="location.href='메인 페에지로 이동'">
-                    post_add
-                </button>
+                <button  type="submit" class="post_button" name="post_button">post_add</button>
             </form>
         </div>
     </div>

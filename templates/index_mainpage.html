@@ -97,7 +97,7 @@
 				<col class="size06" data-alias="req">
 			</colgroup>
 			<thead>
-				<form>
+				<form action="{{ url_for('database_create') }}" method="GET">
 					<tr>
 						<th name="number">번호</th>
 
@@ -114,7 +114,7 @@
 				</form>
 			</thead>
 			<tbody>
-				<tr class="">
+				<tr class="" >
 					<td class="num">
 						<span>1</span>
 					</td>
